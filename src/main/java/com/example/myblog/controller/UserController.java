@@ -20,6 +20,7 @@ public class UserController {
         this.userService = userService;
     }
 
+    //회원 가입 로직
     @PostMapping("/register")
     public ResponseEntity<?> register(@RequestBody UserDto userDto) {
         try {
@@ -31,4 +32,7 @@ public class UserController {
                     .body(Map.of("error", e.getMessage()));
         }
     }
+
+
+
 }

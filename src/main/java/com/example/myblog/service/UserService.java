@@ -17,7 +17,7 @@ public class UserService {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
     }
-
+    /*회원 가입 로직*/
     public void registerUser(UserDto userDto) {
         if (userDto.getPassword() == null || userDto.getPassword().trim().isEmpty()) {
             throw new IllegalArgumentException("Password cannot be empty or null");
